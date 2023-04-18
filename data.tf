@@ -13,3 +13,9 @@ data "aws_iam_role" "lambda" {
 data "aws_iam_policy" "lambda" {
   arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
+
+data "archive_file" "lambda_function" {
+  type        = "zip"
+  source_content_filename = "exam-devops.py"
+  output_path = "lambda_function.zip"
+}
