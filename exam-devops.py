@@ -14,7 +14,7 @@ def lambda_handler(event, context):
       #Vars
       url = 'https://ij92qpvpma.execute-api.eu-west-1.amazonaws.com/candidate-email_serverless_lambda_stage/data'
       headers = {'X-Siemens-Auth': 'test'}
-      subnet_id = os.environ.get("snid")
+      subnet_id = os.environ.get("${snid}")
       payload = {
             "subnet_id": subnet_id,
             "name": "Liron Shemer",
